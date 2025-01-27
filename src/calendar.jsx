@@ -1,11 +1,4 @@
 import React, {useEffect, useState} from "react";
-import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {
-    faAngleDown,
-    faAngleLeft,
-    faAngleRight,
-    faAngleUp,
-} from "@fortawesome/free-solid-svg-icons";
 import {formatDate, getCalendarData} from "./utility";
 
 export default function Calendar({
