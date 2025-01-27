@@ -1,0 +1,105 @@
+.gordon-calendar-main {
+  position: relative;
+  display: inline-block;
+  width: auto;
+}
+
+.gordon-calendar-main input {
+  width: 100%;
+  padding-right: 40px; /* Add padding to avoid overlap with the right element */
+  box-sizing: border-box;
+}
+
+.gordon-calendar-wrapper {
+  width: 227px;
+  position: absolute;
+  right: 0;
+  top: 100%;
+  background: #d1d1d1;
+  box-shadow: 3px 4px 5px 1px #ccc;
+  border-radius: 4px;
+}
+
+.gordon-calendar-wrapper .date-navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.gordon-calendar-wrapper button {
+  padding: 10px;
+  border: none;
+  background: none;
+}
+
+.gordon-calendar-wrapper .gc-year-wrapper {
+  text-align: center;
+  width: 8ch;
+  display: inline-block;
+  position: relative;
+}
+
+.gordon-calendar-wrapper .gc-date-header {
+  font-size: 15px;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.gc-year-wrapper input[type="number"] {
+  background: transparent;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  color: inherit;
+  cursor: text;
+  padding: 0 0 0 0.5ch;
+  margin: 0;
+  display: inline-block;
+  font-size: inherit;
+  font-family: inherit;
+  line-height: inherit;
+  height: auto;
+  border: 0;
+  border-radius: 0;
+  vertical-align: initial;
+  -webkit-appearance: textfield;
+  -moz-appearance: textfield;
+  appearance: textfield;
+  width: 45px;
+}
+
+.gordon-calendar-wrapper .gc-year-wrapper span {
+  position: absolute;
+  font-size: 10px;
+  cursor: pointer;
+}
+
+.gordon-calendar-wrapper .gc-year-wrapper span.arrowUp {
+  top: -2px;
+}
+
+.gordon-calendar-wrapper .gc-date-header .gc-month-list {
+  background: none;
+  border: none;
+}
+.gordon-calendar-wrapper .gc-date-header .gc-month-list:focus-visible {
+  outline: none;
+}
+.gc-year-wrapper input[type="number"]:focus-visible {
+  border-bottom: 2px solid #363535 !important;
+  outline: none;
+}
+
+.gordon-calendar-wrapper .gc-year-wrapper span.arrowDown {
+  bottom: -2px;
+}
+
+.gordon-calendar-wrapper p {
+  margin: 0;
+}
+
+.gordon-calendar-wrapper .celldate-container .celldate:hover {
+  background: #c2c0c0 !important;
+  border-radius: 50%;
+}
