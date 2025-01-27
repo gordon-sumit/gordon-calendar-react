@@ -1,12 +1,12 @@
-import React, { useEffect, useState } from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import React, {useEffect, useState} from "react";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {
     faAngleDown,
     faAngleLeft,
     faAngleRight,
     faAngleUp,
 } from "@fortawesome/free-solid-svg-icons";
-import { formatDate, getCalendarData } from "./utility";
+import {formatDate, getCalendarData} from "./utility";
 
 export default function Calendar({
                                      setSowCalendar,
@@ -111,7 +111,7 @@ export default function Calendar({
                 key={index}
                 onClick={!isDisabled ? () => onDatePick(cellDate) : undefined}
                 className={isDisabled ? "disabled" : "celldate"}
-                style={{ ...cellStyles, color: isDisabled ? "gray" : cellStyles.color }}
+                style={{...cellStyles, color: isDisabled ? "gray" : cellStyles.color}}
             >
                 {date}
             </div>
@@ -122,9 +122,12 @@ export default function Calendar({
         <div className="gordon-calendar-wrapper">
             <div className="date-navigation">
                 <button onClick={() => handleMonthChange(-1)}>
-                    <FontAwesomeIcon icon={faAngleLeft} className="icon-left" />
+                    <svg viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg" style={{width: '18px'}}>
+                        <path
+                            d="M1203 544q0 13-10 23l-393 393 393 393q10 10 10 23t-10 23l-50 50q-10 10-23 10t-23-10l-466-466q-10-10-10-23t10-23l466-466q10-10 23-10t23 10l50 50q10 10 10 23z"/>
+                    </svg>
                 </button>
-                <div className="gc-date-header">
+                <div className="gc-date-header pp">
                     <select
                         className="gc-month-list"
                         value={currentDate.getMonth()}
@@ -143,26 +146,31 @@ export default function Calendar({
                             onChange={(e) => onYearChange(e.target.value)}
                         />
                         <span className="arrowUp" onClick={() => adjustYear(1)}>
-                            <FontAwesomeIcon icon={faAngleUp} />
+                           <svg viewBox="0 0 1792 1792" style={{width: '11px'}} xmlns="http://www.w3.org/2000/svg"><path
+                               d="M1395 1184q0 13-10 23l-50 50q-10 10-23 10t-23-10l-393-393-393 393q-10 10-23 10t-23-10l-50-50q-10-10-10-23t10-23l466-466q10-10 23-10t23 10l466 466q10 10 10 23z"/></svg>
                         </span>
                         <span className="arrowDown" onClick={() => adjustYear(-1)}>
-                            <FontAwesomeIcon icon={faAngleDown} />
+                           <svg viewBox="0 0 1792 1792" style={{width: '11px'}} xmlns="http://www.w3.org/2000/svg"><path
+                               d="M1395 736q0 13-10 23l-466 466q-10 10-23 10t-23-10l-466-466q-10-10-10-23t10-23l50-50q10-10 23-10t23 10l393 393 393-393q10-10 23-10t23 10l50 50q10 10 10 23z"/></svg>
                         </span>
                     </div>
                 </div>
-                <button onClick={() => handleMonthChange(1)}>
-                    <FontAwesomeIcon icon={faAngleRight} className="icon-left" />
+                <button onClick={() => handleMonthChange(1)} className="pp">
+                    <svg viewBox="0 0 1792 1792" style={{width: '18px'}} xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M1171 960q0 13-10 23l-466 466q-10 10-23 10t-23-10l-50-50q-10-10-10-23t10-23l393-393-393-393q-10-10-10-23t10-23l50-50q10-10 23-10t23 10l466 466q10 10 10 23z"/>
+                    </svg>
                 </button>
             </div>
 
             <div
                 className="celldate-container"
-                style={{ display: "grid", gridTemplateColumns: "repeat(7, 1fr)" }}
+                style={{display: "grid", gridTemplateColumns: "repeat(7, 1fr)"}}
             >
                 {["S", "M", "T", "W", "T", "F", "S"].map((day, i) => (
                     <div
                         key={i}
-                        style={{ fontWeight: "bold", textAlign: "center" }}
+                        style={{fontWeight: "bold", textAlign: "center"}}
                     >
                         {day}
                     </div>

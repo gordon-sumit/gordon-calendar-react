@@ -1,7 +1,7 @@
 {
   "name": "gordon-calendar-react",
-  "version": "1.0.0",
-  "description": "",
+  "version": "1.0.2",
+  "description": "A lightweight, powerful react datetime picker for input fields.",
   "main": "dist/index.js",
   "files": [
     "dist"
@@ -12,8 +12,17 @@
   },
   "keywords": [
     "react",
+    "gordon",
+    "react date picker",
     "component",
-    "library"
+    "library",
+    "javascript",
+    "datetimepicker",
+    "calendar",
+    "date",
+    "time",
+    "picker",
+    "lightweight"
   ],
   "author": "Your Name",
   "license": "MIT",
@@ -25,10 +34,6 @@
     "@babel/core": "^7.26.0",
     "@babel/preset-env": "^7.26.0",
     "@babel/preset-react": "^7.26.3",
-    "@fortawesome/free-brands-svg-icons": "^6.7.2",
-    "@fortawesome/free-regular-svg-icons": "^6.7.2",
-    "@fortawesome/free-solid-svg-icons": "^6.7.2",
-    "@fortawesome/react-fontawesome": "^0.2.2",
     "babel-loader": "^9.2.1",
     "css-loader": "^7.1.2",
     "style-loader": "^4.0.0",
